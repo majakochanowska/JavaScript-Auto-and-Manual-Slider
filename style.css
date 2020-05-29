@@ -1,0 +1,182 @@
+.main-container {
+    width: 100%;
+    height: 700px;
+    max-width: 1400px;
+    user-select: none;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.slides-container {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 1px 1px 5px 2px rgba(87,87,87,1);
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.slide-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-prev, .btn-next {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+}
+
+.btn-next {
+    left: auto;
+    right: 10px;  
+}
+
+.btn-prev:hover, .btn-next:hover {
+    cursor: pointer;
+}
+
+.btn-prev:focus, .btn-next:focus {
+    border: none;
+    outline: none;
+}
+
+.arrow-next, .arrow-prev {
+    position: absolute;
+    top: 10px;
+    font-size: 30px;
+    color: white;
+    transition: font-size 0.3s;
+}
+
+.arrow-next {
+    right: 10px;
+}
+
+.arrow-prev {
+    left: 10px;
+}
+
+.arrow-next:hover, .arrow-prev:hover {
+    font-size: 32px;
+}
+
+#dots-container {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color :#b0b0b0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot:first-child {
+    margin-left: 0;
+}
+
+.move-left-current-slide {
+    animation-name: moveLeftCurrent;
+    animation-duration: 1.1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.move-left-next-slide {
+    animation-name: moveLeftNext;
+    animation-duration: 1.1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.move-right-current-slide {
+    animation-name: moveRightCurrent;
+    animation-duration: 1.1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.move-right-next-slide {
+    animation-name: moveRightNext;
+    animation-duration: 1.1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveLeftCurrent {
+    from {
+        margin-left: 0;
+        opacity: 1;
+    }
+    to {
+        margin-left: -100%;
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeftNext {
+    from {
+        margin-left: 100%;
+        opacity: 1;
+    }
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes moveRightCurrent {
+    from {
+        margin-left: 0%;
+        opacity: 1;
+    }
+    to {
+        margin-left: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes moveRightNext {
+    from {
+        margin-left: -100%;
+        opacity: 1;
+    }
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .main-container {
+        height: 50vh;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .main-container {
+        height: 30vh;
+    }
+}
