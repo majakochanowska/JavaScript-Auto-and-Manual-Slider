@@ -100,11 +100,13 @@
 @media all and (max-width: 1100px) {
     .main-container {
         height: 50vh;
+        min-height: 250px;
     }
 }
 
 @media all and (max-width: 600px) {
     .main-container {
         height: 30vh;
+        min-height: 180px;
     }
 }
