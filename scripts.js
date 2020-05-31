@@ -12,7 +12,7 @@ function initGallery() {
     dots = [];
     const dotsContainer = document.getElementById("dots-container");
 
-    for (let i=0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         const dot = document.createElement("span");
         dot.classList.add("dot");
         dot.setAttribute("onClick", "moveSlide("+i+")");
@@ -92,21 +92,20 @@ function moveRightNext(elem) {
 }
 
 function moveSlide(n) {
-    let i;
-    let next=slides[n];
-    let current=slides[slideNum];
+    let next = slides[n];
+    let current = slides[slideNum];
 
-    if (n>slideNum) {
-        if (n>=slides.length) {
+    if (n > slideNum) {
+        if (n >= slides.length) {
             n = 0;
-            next=slides[0];
+            next = slides[0];
         }
 
         moveLeftNext(next);
         moveLeftCurrent(current);
     }
-    else if (n<slideNum) {
-        if (n<0) {
+    else if (n < slideNum) {
+        if (n < 0) {
             n = slides.length - 1;
             next = slides[slides.length-1]
         }
@@ -115,7 +114,7 @@ function moveSlide(n) {
         moveRightCurrent(current);
     }
     if (n !== slideNum) {
-        for (i=0; i<slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
             slides[i].className = "slide-img";
             dots[i].style.backgroundColor = "#b0b0b0";
         }
