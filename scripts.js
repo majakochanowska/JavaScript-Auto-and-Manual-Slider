@@ -48,7 +48,7 @@ function moveLeftCurrent(elem) {
             elem.style.left = pos + '%'; 
         }
     }
-  }
+}
 
 function moveLeftNext(elem) { 
     let pos = 100;
@@ -75,7 +75,7 @@ function moveRightCurrent(elem) {
             elem.style.left = pos + '%'; 
       }
     }
-  }
+}
 
 function moveRightNext(elem) { 
     let pos = -100;
