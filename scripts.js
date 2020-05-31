@@ -41,12 +41,12 @@ function moveLeftCurrent(elem) {
     let pos = 0;
     let id = setInterval(frame, interval);
     function frame() {
-      if (pos == -100) {
-        clearInterval(id);
-      } else {
-        pos--; 
-        elem.style.left = pos + '%'; 
-      }
+        if (pos == -100) {
+            clearInterval(id);
+        } else {
+            pos--; 
+            elem.style.left = pos + '%'; 
+        }
     }
   }
 
@@ -55,11 +55,11 @@ function moveLeftNext(elem) {
     let id = setInterval(frame, interval);
     function frame() {
         if (pos == 0) {
-        clearInterval(id);
+            clearInterval(id);
         } else {
-        pos--; 
-        elem.style.left = pos + '%'; 
-        elem.style.opacity = 1;
+            pos--; 
+            elem.style.left = pos + '%'; 
+            elem.style.opacity = 1;
         }
     }
 }
@@ -68,11 +68,11 @@ function moveRightCurrent(elem) {
     let pos = 0;
     let id = setInterval(frame, interval);
     function frame() {
-      if (pos == 100) {
-        clearInterval(id);
-      } else {
-        pos++; 
-        elem.style.left = pos + '%'; 
+        if (pos == 100) {
+            clearInterval(id);
+        } else {
+            pos++; 
+            elem.style.left = pos + '%'; 
       }
     }
   }
@@ -82,11 +82,11 @@ function moveRightNext(elem) {
     let id = setInterval(frame, interval);
     function frame() {
         if (pos == 0) {
-        clearInterval(id);
+            clearInterval(id);
         } else {
-        pos++; 
-        elem.style.left = pos + '%'; 
-        elem.style.opacity = 1;
+            pos++; 
+            elem.style.left = pos + '%'; 
+            elem.style.opacity = 1;
         }
     }
 }
