@@ -8,10 +8,10 @@
     <title>JavaScript Auto Slider</title>
   </head>
   <body>
-    <div class="main-container" onmouseenter="pause()" onmouseleave="start()">
+    <div class="main-container" id="main-container">
         <div class="slides-container">
-            <button class="btn-prev" onclick="moveByOne(-1)"><i class="fas fa-arrow-alt-circle-left arrow-prev"></i></button>
-            <button class="btn-next" onclick="moveByOne(1)"><i class="fas fa-arrow-alt-circle-right arrow-next"></i></button>
+            <button class="btn-prev" id="btn-prev"><i class="fas fa-arrow-alt-circle-left arrow-prev"></i></button>
+            <button class="btn-next" id="btn-next"><i class="fas fa-arrow-alt-circle-right arrow-next"></i></button>
             <div class="slide-img">
                 <img src="img/photo1.jpg" alt="photo 1">
             </div>
@@ -25,7 +25,7 @@
                 <img src="img/photo4.jpg" alt="photo 4">
             </div>
         </div>
-        <div id="dots-container"></div>
+        <div class="dots-container" id="dots-container"></div>
     </div>
     <script src="scripts.js"></script>
   </body>

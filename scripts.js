@@ -1,3 +1,6 @@
+const mainContainer = document.getElementById("main-container");
+const btnPrev = document.getElementById("btn-prev");
+const btnNext = document.getElementById("btn-next");
 let slideNum, slides, dots;
 
 function initGallery() {
@@ -24,6 +27,13 @@ initGallery();
 function moveByOne(n) {
     moveSlide(slideNum + n)
 }
+
+btnPrev.addEventListener("click", () => {
+    moveByOne(-1);
+});
+btnNext.addEventListener("click", () => {
+    moveByOne(1);
+});
 
 function moveSlide(n) {
     let i, current, next;
@@ -70,5 +80,8 @@ function start() {
 function pause() {
     clearInterval(timer)
 }
+
+mainContainer.addEventListener("mouseenter", pause);
+mainContainer.addEventListener("mouseleave", start);
 
 start();
